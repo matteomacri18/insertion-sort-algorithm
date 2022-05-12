@@ -7,3 +7,5 @@ Complexities: <br>
 Best case: O(n)<br>
 Wrost case: O(<span>n<sup>2</sup></span>) <br>
 Average case: O(<span>n<sup>2</sup></span>) <br>
+
+![alt text](file:///C:/Users/Asus/Downloads/Insertion%20Sort.png)
