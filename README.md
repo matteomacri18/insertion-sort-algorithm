@@ -8,6 +8,6 @@ Best case: O(n)<br>
 Wrost case: O(<span>n<sup>2</sup></span>) <br>
 Average case: O(<span>n<sup>2</sup></span>) <br>
 
-<p align="center">
-  ![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vS0a5c35gkDYprl1j1QtisK5dj8z2IkT7aDc243sv7dBYr5g054ZEBvYSt6Z7QJAA/pubchart?oid=1829242455&format=image)
-</p>
+
+![alt text](https://docs.google.com/spreadsheets/d/e/2PACX-1vS0a5c35gkDYprl1j1QtisK5dj8z2IkT7aDc243sv7dBYr5g054ZEBvYSt6Z7QJAA/pubchart?oid=1829242455&format=image)
+
