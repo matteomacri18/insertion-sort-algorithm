@@ -1,13 +1,8 @@
-/* Librerie:
- * stdlib.h per la funzione srand()
- * time.h per prendere il tempo di clock
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-/* Algoritmo InsertionSort: passo per parametri puntatore Array e la sua lunghezza */
+/* InsertionSort Algorithm */
 void InsertionSort(int *A, int len)
 {
     int i, j, key;
@@ -24,7 +19,7 @@ void InsertionSort(int *A, int len)
     }
 }
 
-/* ESPERIMENTO SINGOLO */
+/* Singolo Experiment*/
 float singoloEsperimento(int len, int maxInstance)
 {
     float timeTot = 0;
@@ -33,9 +28,9 @@ float singoloEsperimento(int len, int maxInstance)
         float timeStart, timeEnd, timeElapsed;
         int A[len];
 
-        for (int j = 0; j < len; j++)    // Generatore Array di numeri Casuali:
-        {                                // tramite il metodo rand()%N, genera un numero tra 0 e N-1
-            A[j] = 1 + rand() % 1000000; // e metto il numero generato nell'array
+        for (int j = 0; j < len; j++)    // Generator Array of casual numbers:
+        {                                // through rand()%N, it generates a number between 0 e N-1
+            A[j] = 1 + rand() % 1000000; // and i put this number into the array
         }
 
         printf("Non ordinato\n");
@@ -44,22 +39,22 @@ float singoloEsperimento(int len, int maxInstance)
             printf("%d\n", A[j]); 
         }
 
-        timeStart = clock(); //inzio tempo
+        timeStart = clock(); //start time
         InsertionSort(A, len);
-        timeEnd = clock(); //fine tempo
+        timeEnd = clock(); //end time
 
         printf("ordinato\n");
         for (int j = 0; j < len; j++)    
         {                                
             printf("%d\n", A[j]); 
         }
-        timeElapsed = timeEnd - timeStart; //tempo trascorso
+        timeElapsed = timeEnd - timeStart; //time passed
         timeTot = timeTot + timeElapsed;
     }
     return timeTot / maxInstance;
 }
 
-/* ESPERIMENTO INSERTION SORT */
+/* INSERTION SORT Experiment */
 void esperimento(int minLen, int maxLen)
 {
     int maxInstances = 2; // numero di istanze array per tentativo della lunghezza dell'array
@@ -74,14 +69,15 @@ void esperimento(int minLen, int maxLen)
     }
 }
 
-/* Funzione Main */
+/* MAIN FUNCTION */
 int main(int argc, char *argv[])
 {
-    srand(50); // come parametro si mette un SEED che serve per il pseudo-RNG
-    int minLength = 3;
-    int maxLength = 10;
-    esperimento(minLength, maxLength); // esperimento() mi da n.Tempi per tentativo
-                                       // dove n = (maxLength - minLength) / Step
+    // as seed i set 50
+    srand(50);
+    int minLength = 0;
+    int maxLength = 1000;
+    esperimento(minLength, maxLength); // esperimento() gives me n Time for try
+                                       // where n = (maxLength - minLength) / Step
 
     return 0;
 }
