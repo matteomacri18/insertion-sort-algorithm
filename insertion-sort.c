@@ -57,8 +57,8 @@ float singoloEsperimento(int len, int maxInstance)
 /* INSERTION SORT Experiment */
 void esperimento(int minLen, int maxLen)
 {
-    int maxInstances = 2; // numero di istanze array per tentativo della lunghezza dell'array
-    int STEP = 1;         // mi aumenta numero di elementi dell'array                        
+    int maxInstances = 2; // number of instance for each attempt 
+    int STEP = 1;         // increments elements of array one-by-one                        
     float time;
 
     for (int i = minLen; i < maxLen; i = i + STEP)
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
     srand(50);
     int minLength = 0;
     int maxLength = 1000;
-    esperimento(minLength, maxLength); // esperimento() gives me n Time for try
+    esperimento(minLength, maxLength); // esperimento() gives me n Time for attempt
                                        // where n = (maxLength - minLength) / Step
 
     return 0;
