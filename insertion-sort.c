@@ -1,3 +1,11 @@
+/* @Parameters
+ * minLength = 0
+ * maxLength = 1000
+ * seed = 50 for the function srand(seed)
+ * maxInstance = 2 number of instance for each attempt 
+ * STEP = 1 incrementing value for each experiment
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -19,7 +27,9 @@ void InsertionSort(int *A, int len)
     }
 }
 
-/* Singolo Experiment*/
+/* Singolo Experiment
+ * every array created has the same length
+ */
 float singoloEsperimento(int len, int maxInstance)
 {
     float timeTot = 0;
