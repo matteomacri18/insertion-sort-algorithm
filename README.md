@@ -1,3 +1,5 @@
+# How Insertion Sort works
+
 # Insertion Sort Algorithm in C
 Implementation InsertionSort Algorithm - from  Steven S. Skenia - The algorithm design manual book
 
